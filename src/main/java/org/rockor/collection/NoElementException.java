@@ -1,8 +1,15 @@
 package org.rockor.collection;
 
 /**
- * Created by ACER on 25-06-2016.
+ * @author Abhilash Krishnan
  */
 public class NoElementException extends RuntimeException {
 
+    public NoElementException() {
+        super();
+    }
+
+    public NoElementException(String s) {
+        super(s);
+    }
 }

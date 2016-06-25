@@ -3,7 +3,7 @@ package org.rockor.collection;
 import static org.junit.Assert.*;
 
 /**
- * Created by ACER on 25-06-2016.
+ * @author Abhilash Krishnan
  */
 public class SinglyLinkedListTest {
     SinglyLinkedList<String> list;

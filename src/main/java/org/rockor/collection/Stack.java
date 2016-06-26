@@ -14,7 +14,8 @@ public class Stack<E> extends SinglyLinkedList<E> {
     }
 
     public E pop () {
-        return removeFirst();
+        E e = removeFirst();
+        return e;
     }
 
     public boolean empty() {

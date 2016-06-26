@@ -1,26 +1,20 @@
 package org.rockor.collection;
 
 /**
- * The <code>Stack</code> represents a last-in-first-out list of objects
- * @author Abhilash Krishnan
+ * The <code>Stack</code> represents a last-in-first-out list of objects using linked list
  */
-public class Stack<E> extends ArrayList<E> {
+public class Stack<E> extends SinglyLinkedList<E> {
 
     public Stack() {
 
     }
 
-    public void push(E e) {
-        add(e);
+    public void push (E e) {
+        addFirst(e);
     }
 
-    public E pop() {
-        E e;
-
-        int len = size();
-        e = removeElementAt(len - 1);
-
-        return e;
+    public E pop () {
+        return removeFirst();
     }
 
     public boolean empty() {

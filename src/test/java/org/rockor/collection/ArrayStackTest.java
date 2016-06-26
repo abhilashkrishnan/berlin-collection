@@ -9,12 +9,12 @@ import static org.junit.Assert.*;
 /**
  * @author Abhilash Krishnan
  */
-public class StackTest {
-    Stack<String> stack;
+public class ArrayStackTest {
+    ArrayStack<String> stack;
 
     @Before
     public void setUp() throws Exception {
-        stack = new Stack<>();
+        stack = new ArrayStack<>();
     }
 
     @After
@@ -25,15 +25,15 @@ public class StackTest {
     @Test
     public void push() throws Exception {
         stack.push("Abhilash");
-        stack.push("Sasha");
-        assertEquals(2, stack.size());
+        stack.push("Mark");
+        assertTrue(stack.size() == 2);
     }
 
     @Test
     public void pop() throws Exception {
         stack.push("Abhilash");
-        stack.push("Sasha");
-        assertEquals("Sasha", stack.pop());
+        stack.push("Mark");
+        assertEquals("Mark", stack.pop());
         assertEquals("Abhilash", stack.pop());
     }
 

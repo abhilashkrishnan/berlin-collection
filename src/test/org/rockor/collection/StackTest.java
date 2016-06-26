@@ -26,7 +26,7 @@ public class StackTest {
     public void push() throws Exception {
         stack.push("Abhilash");
         stack.push("Mark");
-        assertFalse(stack.empty());
+        assertTrue(stack.size() == 2);
     }
 
     @Test

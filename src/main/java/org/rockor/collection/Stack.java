@@ -6,6 +6,10 @@ package org.rockor.collection;
  */
 public class Stack<E> extends ArrayList<E> {
 
+    public Stack() {
+
+    }
+
     public void push(E e) {
         add(e);
     }

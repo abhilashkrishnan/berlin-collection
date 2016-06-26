@@ -17,7 +17,7 @@ public class CircularSinglyLinkedList<E> {
         return size;
     }
 
-    public  void link(E e) {
+    void link(E e) {
         Node<E> h = head;
         Node<E> newNode = new Node<>(e, h);
         head = newNode;
@@ -38,13 +38,13 @@ public class CircularSinglyLinkedList<E> {
         size++;
     }
 
-    public E unlink(Node<E> n) {
+    E unlink(Node<E> n) {
         E e = n.item;
         size--;
         return e;
     }
 
-    public E unlinkEldest(Node<E> p) {
+    E unlinkEldest(Node<E> p) {
         Node<E> h = head;
         Node<E> prev = null;
         for (Node<E> cur = h; cur.next != h; cur = cur.next)
@@ -56,7 +56,7 @@ public class CircularSinglyLinkedList<E> {
         return unlink(p);
     }
 
-    public E unlinkRecent(Node<E> h) {
+    E unlinkRecent(Node<E> h) {
         Node<E> next = null;
         for (Node<E> cur = h; cur.next != h; cur = cur.next)
             next = cur.next;

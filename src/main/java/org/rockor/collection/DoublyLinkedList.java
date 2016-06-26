@@ -19,7 +19,7 @@ public class DoublyLinkedList<E> {
         return size;
     }
 
-    public void linkHead(E e) {
+    void linkHead(E e) {
         Node<E> h = head;
         Node<E> newNode = new Node<>(null, e, head);
         head = newNode;
@@ -28,7 +28,7 @@ public class DoublyLinkedList<E> {
         size++;
     }
 
-    public void linkTail(E e) {
+    void linkTail(E e) {
         Node<E> t = tail;
         Node<E> newNode = new Node<>(tail, e, null);
         tail = newNode;
@@ -37,7 +37,7 @@ public class DoublyLinkedList<E> {
         size++;
     }
 
-    public E unlinkHead(Node<E> h) {
+    E unlinkHead(Node<E> h) {
         E e = h.item;
         Node<E> next = h.next;
         head = next;
@@ -48,7 +48,7 @@ public class DoublyLinkedList<E> {
         return e;
     }
 
-    public E unlinkTail(Node<E> t) {
+    E unlinkTail(Node<E> t) {
         E e = t.item;
         Node<E> prev = t.prev;
         tail = prev;

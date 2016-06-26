@@ -20,12 +20,12 @@ public class ArrayList<E> {
         return size;
     }
 
-    public void ensureCapacity(int minCapacity) {
+    void ensureCapacity(int minCapacity) {
         if(minCapacity > elements.length)
             grow(minCapacity);
     }
 
-    public void grow(int minCapacity) {
+    void grow(int minCapacity) {
         int oldCapacity = elements.length;
         int newCapacity = oldCapacity + (oldCapacity >> 1);
 
@@ -34,7 +34,7 @@ public class ArrayList<E> {
         elements = Arrays.copyOf(elements, newCapacity);
     }
 
-    public void rangeCheck(int index) {
+    void rangeCheck(int index) {
         if(index < 0 || index > size)
             throw new ArrayIndexOutOfBoundsException();
     }
@@ -75,7 +75,7 @@ public class ArrayList<E> {
         return false;
     }
 
-    public void fastRemove(int index) {
+    void fastRemove(int index) {
         int moved = size - index - 1;
         if(moved > 0)
             System.arraycopy(elements, index+1, elements, index, moved);

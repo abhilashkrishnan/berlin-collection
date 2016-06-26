@@ -20,7 +20,7 @@ public class SinglyLinkedList<E> {
         return size;
     }
 
-    private void linkHead(E e) {
+    void linkHead(E e) {
         Node<E> h = head;
         Node<E> newNode = new Node<>(e, h);
         head = newNode;
@@ -34,7 +34,7 @@ public class SinglyLinkedList<E> {
         linkHead(e);
     }
 
-    private void linkTail(E e) {
+    void linkTail(E e) {
         Node<E> t = tail;
         Node<E> newNode = new Node<>(e, null);
         tail = newNode;
@@ -49,7 +49,7 @@ public class SinglyLinkedList<E> {
         linkTail(e);
     }
 
-    private E unlinkHead(Node<E> h) {
+    E unlinkHead(Node<E> h) {
         final E element = h.item;
         Node<E> next = h.next;
         h.item = null;
@@ -61,7 +61,7 @@ public class SinglyLinkedList<E> {
         return element;
     }
 
-    private E unlinkTail(Node<E> t) {
+    E unlinkTail(Node<E> t) {
         E element = t.item;
         t.item = null;
         t.next = null;

@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by ACER on 26-06-2016.
+ * @author Abhilash Krishnan
  */
 public class QueueTest {
     Queue<String> queue;

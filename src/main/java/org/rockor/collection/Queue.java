@@ -1,7 +1,8 @@
 package org.rockor.collection;
 
 /**
- * Created by ACER on 26-06-2016.
+ * The <code>Queue</code> is a first-in-first-out list of objects
+ * @author Abhilash Krishnan
  */
 public class Queue<E> extends ArrayList<E> {
 

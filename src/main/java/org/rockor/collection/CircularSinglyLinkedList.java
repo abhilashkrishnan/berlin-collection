@@ -1,7 +1,7 @@
 package org.rockor.collection;
 
 /**
- * Circular linked list implementation using <code>SinglyLinkedList</code>
+ * Circular linked list implementation using singly linked list
  * @author Abhilash Krishnan
  */
 public class CircularSinglyLinkedList<E> {

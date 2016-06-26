@@ -4,7 +4,6 @@ package org.rockor.collection;
  * Singly-linked list implementation.
  *
  * @author Abhilash Krishnan
- * @param <E> the type of the elements held in this list
   */
 public class SinglyLinkedList<E> {
 
@@ -67,19 +66,17 @@ public class SinglyLinkedList<E> {
         t.item = null;
         t.next = null;
 
-        Node<E> pre = null;
+        Node<E> prev = null;
 
-        for(Node<E> cur = head; cur.next != null; ) {
-            pre = cur;
-            cur = cur.next;
-        }
+        for (Node<E> cur = head; cur.next != null; cur = cur.next)
+            prev = cur;
 
-        if(pre == null)
-            head = pre;
+        if(prev == null)
+            head = prev;
         else
-            pre.next = null;
+            prev.next = null;
 
-        tail = pre;
+        tail = prev;
         size--;
         return element;
     }
@@ -98,23 +95,15 @@ public class SinglyLinkedList<E> {
         return unlinkTail(t);
     }
 
-    public void push(E e) {
-        addFirst(e);
-    }
-
-    public E pop() {
-        return removeFirst();
-    }
-
     public Object[] toArray() {
         Object[] result = new Object[size];
         int i=0;
-        for(Node<E> x = head; x != null; x = x.next)
+        for (Node<E> x = head; x != null; x = x.next)
             result[i++] = x.item;
         return result;
     }
 
-    private static class Node<E> {
+    protected static class Node<E> {
         E item;
         Node<E> next;
 

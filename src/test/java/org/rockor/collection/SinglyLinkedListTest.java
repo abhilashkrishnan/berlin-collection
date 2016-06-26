@@ -56,29 +56,11 @@ public class SinglyLinkedListTest {
         assertEquals("Mark", s);
     }
 
-
-    @org.junit.Test
-    public void push() throws Exception {
-        list.push("Mark");
-        assertNotNull(list.head);
-        assertNotNull(list.tail);
-    }
-
-    @org.junit.Test
-    public void pop() throws Exception {
-        list.push("Mark");
-        list.push("Steve");
-        String s = list.pop();
-        assertEquals("Steve", s);
-        s = list.pop();
-        assertEquals("Mark", s);
-    }
-
     @org.junit.Test
     public void toArray() throws Exception {
-        list.push("Mark");
-        list.push("Steve");
-        list.push("Larry");
+        list.addFirst("Mark");
+        list.addFirst("Steve");
+        list.addFirst("Larry");
         Object[] arr = list.toArray();
         assertNotNull(arr);
         assertTrue(arr.length == 3);

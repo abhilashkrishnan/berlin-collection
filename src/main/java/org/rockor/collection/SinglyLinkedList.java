@@ -17,6 +17,10 @@ public class SinglyLinkedList<E> {
 
     }
 
+    public int size() {
+        return size;
+    }
+
     private void linkHead(E e) {
         Node<E> h = head;
         Node<E> newNode = new Node<>(e, h);

@@ -3,19 +3,18 @@ package org.rockor.collection;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.rockor.collection.Queue;
 
 import static org.junit.Assert.*;
 
 /**
  * @author Abhilash Krishnan
  */
-public class QueueTest {
-    Queue<String> queue;
+public class LinkedQueueTest {
+    LinkedQueue<String> queue;
 
     @Before
     public void setUp() throws Exception {
-        queue = new Queue<>();
+        queue = new LinkedQueue<>();
     }
 
     @After

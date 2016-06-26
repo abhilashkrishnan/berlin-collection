@@ -1,7 +1,7 @@
 package org.rockor.collection;
 
 /**
- * The <code>ArrayStack</code> represents a last-in-first-out list of objects
+ * The <code>ArrayStack</code> represents a last-in-first-out list of objects using <code>ArrayList</code>
  * @author Abhilash Krishnan
  */
 public class ArrayStack<E> extends ArrayList<E> {

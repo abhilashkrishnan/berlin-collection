@@ -9,12 +9,12 @@ import static org.junit.Assert.*;
 /**
  * @author Abhilash Krishnan
  */
-public class StackTest {
-    Stack<String> stack;
+public class LinkedStackTest {
+    LinkedStack<String> stack;
 
     @Before
     public void setUp() throws Exception {
-        stack = new Stack<>();
+        stack = new LinkedStack<>();
     }
 
     @After

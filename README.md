@@ -1,2 +1,2 @@
 # javads
-A collections framework for Java applications.
+A collection of data structures for Java applications.

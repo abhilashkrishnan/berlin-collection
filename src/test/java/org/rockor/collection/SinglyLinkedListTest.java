@@ -1,5 +1,7 @@
 package org.rockor.collection;
 
+import org.rockor.collection.SinglyLinkedList;
+
 import static org.junit.Assert.*;
 
 /**

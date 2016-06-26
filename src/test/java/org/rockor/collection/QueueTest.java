@@ -3,6 +3,7 @@ package org.rockor.collection;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.rockor.collection.Queue;
 
 import static org.junit.Assert.*;
 

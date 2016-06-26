@@ -103,7 +103,7 @@ public class SinglyLinkedList<E> {
         return result;
     }
 
-    protected static class Node<E> {
+    private static class Node<E> {
         E item;
         Node<E> next;
 

@@ -31,16 +31,16 @@ public class CircularSinglyLinkedListTest {
     }
 
     @Test
-    public void removeFirst() throws Exception {
+    public void removeFirstElement() throws Exception {
         list.add("Abhilash");
         list.add("Mark");
         //list.add("Larry");
         //list.add("Einstein");
-        assertEquals("Abhilash", list.removeFirst());
-        assertEquals("Mark", list.removeFirst());
-        //assertEquals("Larry", list.removeFirst());
-        //assertEquals("Einstein", list.removeFirst());
-        //list.removeFirst();
+        assertEquals("Abhilash", list.removeEldest());
+        assertEquals("Mark", list.removeEldest());
+        //assertEquals("Larry", list.removeEldest());
+        //assertEquals("Einstein", list.removeEldest());
+        //list.removeEldest();
     }
 
     @Test
@@ -48,10 +48,10 @@ public class CircularSinglyLinkedListTest {
         list.add("Abhilash");
         list.add("Mark");
         //list.add("Sasha");
-        //assertEquals("Sasha", list.removeLast());
-        assertEquals("Mark", list.removeLast());
-        assertEquals("Abhilash", list.removeLast());
-        //list.removeLast();
+        //assertEquals("Sasha", list.removeRecent());
+        assertEquals("Mark", list.removeRecent());
+        assertEquals("Abhilash", list.removeRecent());
+        //list.removeRecent();
     }
 
     @Test
@@ -59,9 +59,9 @@ public class CircularSinglyLinkedListTest {
         list.add("Abhilash");
         list.add("Mark");
         assertEquals(2, list.size());
-        list.removeLast();
+        list.removeRecent();
         assertEquals(1, list.size());
-        list.removeLast();
+        list.removeRecent();
         assertEquals(0, list.size());
     }
 }

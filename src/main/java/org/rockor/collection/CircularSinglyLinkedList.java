@@ -4,10 +4,17 @@ package org.rockor.collection;
  * Circular linked list implementation using <code>SinglyLinkedList</code>
  * @author Abhilash Krishnan
  */
-public class CircularSinglyLinkedList<E> extends SinglyLinkedList<E> {
+public class CircularSinglyLinkedList<E> {
+    transient int size = 0;
+
+    transient Node<E> head;
 
     public CircularSinglyLinkedList() {
 
+    }
+
+    public int size() {
+        return size;
     }
 
     public  void link(E e) {
@@ -37,7 +44,7 @@ public class CircularSinglyLinkedList<E> extends SinglyLinkedList<E> {
         return e;
     }
 
-    public E unlinkFirst(Node<E> p) {
+    public E unlinkEldest(Node<E> p) {
         Node<E> h = head;
         Node<E> prev = null;
         for (Node<E> cur = h; cur.next != h; cur = cur.next)
@@ -49,7 +56,7 @@ public class CircularSinglyLinkedList<E> extends SinglyLinkedList<E> {
         return unlink(p);
     }
 
-    public E unlinkLast(Node<E> h) {
+    public E unlinkRecent(Node<E> h) {
         Node<E> next = null;
         for (Node<E> cur = h; cur.next != h; cur = cur.next)
             next = cur.next;
@@ -67,10 +74,10 @@ public class CircularSinglyLinkedList<E> extends SinglyLinkedList<E> {
     }
 
     /**
-     * Removes the first inserted element
-     * @return first inserted element
+     * Remove the eldest added element
+     * @return eldest added element
      */
-    public E removeFirst() {
+    public E removeEldest() {
         E e = null;
         Node<E> h = head;
 
@@ -87,16 +94,16 @@ public class CircularSinglyLinkedList<E> extends SinglyLinkedList<E> {
                 next = cur.next;
 
             if (next != null)
-                e = unlinkFirst(next);
+                e = unlinkEldest(next);
         }
         return e;
     }
 
     /**
-     * Remove the last inserted element
-     * @return the last inserted element
+     * Remove the recent added element
+     * @return the recent added element
      */
-    public E removeLast() {
+    public E removeRecent() {
         E e;
         Node<E> h = head;
 
@@ -107,9 +114,19 @@ public class CircularSinglyLinkedList<E> extends SinglyLinkedList<E> {
             head = null;
         }
         else {
-            e = unlinkLast(h);
+            e = unlinkRecent(h);
         }
 
         return e;
+    }
+
+    private static class Node<E> {
+        E item;
+        Node<E> next;
+
+        Node(E element, Node<E> next) {
+            this.item = element;
+            this.next = next;
+        }
     }
 }

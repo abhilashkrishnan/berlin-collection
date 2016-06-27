@@ -1,4 +1,4 @@
-package org.rockor.collection;
+package org.brelin.collection;
 
 /**
  * The <code>ArrayStack</code> represents a last-in-first-out list of objects using <code>ArrayList</code>

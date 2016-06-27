@@ -1,4 +1,4 @@
-package org.rockor.collection;
+package org.brelin.collection;
 
 /**
  * The <code>LinkedStack</code> represents a last-in-first-out list of objects using linked list

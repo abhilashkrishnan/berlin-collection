@@ -1,4 +1,4 @@
-package org.rockor.collection;
+package org.brelin.collection;
 
 /**
  * Doubly linked list implementation

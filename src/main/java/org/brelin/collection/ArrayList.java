@@ -1,4 +1,4 @@
-package org.rockor.collection;
+package org.brelin.collection;
 
 import java.util.Arrays;
 

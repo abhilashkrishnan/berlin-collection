@@ -1,7 +1,6 @@
-package org.rockor.collection;
+package org.brelin.collection;
 
 import org.junit.Test;
-import org.rockor.collection.ArrayList;
 
 import static org.junit.Assert.*;
 

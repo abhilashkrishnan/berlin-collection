@@ -1,4 +1,4 @@
-package org.rockor.collection;
+package org.brelin.collection;
 
 /**
  * The <code>LinkedQueue</code> is a first-in-first-out list of objects

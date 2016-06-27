@@ -1,4 +1,4 @@
-package org.rockor.collection;
+package org.brelin.collection;
 
 /**
  * The <code>LinearQueue</code> represents a first-in-first-out list of objects using <code>ArrayList</code>

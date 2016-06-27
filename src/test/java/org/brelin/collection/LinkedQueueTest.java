@@ -1,4 +1,4 @@
-package org.rockor.collection;
+package org.brelin.collection;
 
 import org.junit.After;
 import org.junit.Before;
@@ -9,12 +9,12 @@ import static org.junit.Assert.*;
 /**
  * @author Abhilash Krishnan
  */
-public class LinearQueueTest {
-    LinearQueue<String> queue;
+public class LinkedQueueTest {
+    LinkedQueue<String> queue;
 
     @Before
     public void setUp() throws Exception {
-        queue = new LinearQueue<>();
+        queue = new LinkedQueue<>();
     }
 
     @After
@@ -25,22 +25,24 @@ public class LinearQueueTest {
     @Test
     public void enQueue() throws Exception {
         queue.enQueue("Abhilash");
-        queue.enQueue("Sasha");
-        assertEquals(2, queue.size());
+        queue.enQueue("Mark");
+        assertTrue(queue.size() == 2);
     }
 
     @Test
     public void deQueue() throws Exception {
         queue.enQueue("Abhilash");
-        queue.enQueue("Sasha");
+        queue.enQueue("Mark");
         assertEquals("Abhilash", queue.deQueue());
-        assertEquals("Sasha", queue.deQueue());
+        assertEquals("Mark", queue.deQueue());
     }
 
     @Test
     public void empty() throws Exception {
         queue.enQueue("Abhilash");
+        queue.enQueue("Mark");
         assertFalse(queue.empty());
+        queue.deQueue();
         queue.deQueue();
         assertTrue(queue.empty());
     }

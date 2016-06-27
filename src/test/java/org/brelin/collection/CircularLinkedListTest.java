@@ -1,4 +1,4 @@
-package org.rockor.collection;
+package org.brelin.collection;
 
 import org.junit.After;
 import org.junit.Before;

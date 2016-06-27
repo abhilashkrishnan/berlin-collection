@@ -1,7 +1,7 @@
 package org.rockor.collection;
 
 /**
- * Created by ACER on 26-06-2016.
+ * @author Abhilash Krishnan
  */
 public class ArrayIndexOutOfBoundsException extends RuntimeException {
 

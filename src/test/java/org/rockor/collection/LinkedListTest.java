@@ -1,18 +1,16 @@
 package org.rockor.collection;
 
-import org.rockor.collection.SinglyLinkedList;
-
 import static org.junit.Assert.*;
 
 /**
  * @author Abhilash Krishnan
  */
-public class SinglyLinkedListTest {
-    SinglyLinkedList<String> list;
+public class LinkedListTest {
+    LinkedList<String> list;
 
     @org.junit.Before
     public void setUp() throws Exception {
-        list = new SinglyLinkedList<>();
+        list = new LinkedList<>();
     }
 
     @org.junit.After

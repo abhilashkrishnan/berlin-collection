@@ -3,7 +3,7 @@ package org.rockor.collection;
 /**
  * The <code>DeQueue</code> represents double ended queue
  */
-public class DeQueue<E> extends SinglyLinkedList<E> {
+public class DeQueue<E> extends LinkedList<E> {
 
     public DeQueue() {
 

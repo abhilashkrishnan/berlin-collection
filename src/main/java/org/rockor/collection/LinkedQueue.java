@@ -4,7 +4,7 @@ package org.rockor.collection;
  * The <code>LinkedQueue</code> is a first-in-first-out list of objects
  * @author Abhilash Krishnan
  */
-public class LinkedQueue<E> extends SinglyLinkedList<E> {
+public class LinkedQueue<E> extends LinkedList<E> {
 
     public LinkedQueue() {
 

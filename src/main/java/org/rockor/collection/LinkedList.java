@@ -5,14 +5,14 @@ package org.rockor.collection;
  *
  * @author Abhilash Krishnan
   */
-public class SinglyLinkedList<E> {
+public class LinkedList<E> {
 
     transient int size = 0;
 
     transient Node<E> head;
     transient Node<E> tail;
 
-    public SinglyLinkedList() {
+    public LinkedList() {
 
     }
 

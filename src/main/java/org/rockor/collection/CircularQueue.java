@@ -3,7 +3,7 @@ package org.rockor.collection;
 /**
  * @author Abhilash Krishnan
  */
-public class CircularQueue<E> extends CircularSinglyLinkedList<E> {
+public class CircularQueue<E> extends CircularLinkedList<E> {
 
     public CircularQueue() {
 

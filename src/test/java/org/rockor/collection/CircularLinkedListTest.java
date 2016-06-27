@@ -9,13 +9,13 @@ import static org.junit.Assert.*;
 /**
  * Created by ACER on 26-06-2016.
  */
-public class CircularSinglyLinkedListTest {
+public class CircularLinkedListTest {
 
-    CircularSinglyLinkedList<String> list;
+    CircularLinkedList<String> list;
 
     @Before
     public void setUp() throws Exception {
-        list = new CircularSinglyLinkedList<>();
+        list = new CircularLinkedList<>();
     }
 
     @After

@@ -4,12 +4,12 @@ package org.rockor.collection;
  * Circular linked list implementation using singly linked list
  * @author Abhilash Krishnan
  */
-public class CircularSinglyLinkedList<E> {
+public class CircularLinkedList<E> {
     transient int size = 0;
 
     transient Node<E> head;
 
-    public CircularSinglyLinkedList() {
+    public CircularLinkedList() {
 
     }
 

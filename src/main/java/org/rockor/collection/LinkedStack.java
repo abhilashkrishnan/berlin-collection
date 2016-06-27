@@ -3,7 +3,7 @@ package org.rockor.collection;
 /**
  * The <code>LinkedStack</code> represents a last-in-first-out list of objects using linked list
  */
-public class LinkedStack<E> extends SinglyLinkedList<E> {
+public class LinkedStack<E> extends LinkedList<E> {
 
     public LinkedStack() {
 
